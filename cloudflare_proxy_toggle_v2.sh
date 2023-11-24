@@ -18,15 +18,15 @@ toggle_proxy() {
     --data "{\"proxied\":$proxy_set, \"ttl\":$ttl_value}"
 }
 
-# Enable proxy
-toggle_proxy "zone_identifier_01" "a_record_id_01" true
-toggle_proxy "zone_identifier_02" "a_record_id_02" true
-toggle_proxy "zone_identifier_03" "a_record_id_03" true
-
-# Sleep for 4 hours (14400 seconds)
-sleep 14400
-
 # Disable proxy
 toggle_proxy "zone_identifier_01" "a_record_id_01" false 60
 toggle_proxy "zone_identifier_02" "a_record_id_02" false 60
 toggle_proxy "zone_identifier_03" "a_record_id_03" false 60
+
+# Sleep for 4 hours (14400 seconds)
+sleep 14400
+
+# Enable proxy
+toggle_proxy "zone_identifier_01" "a_record_id_01" true
+toggle_proxy "zone_identifier_02" "a_record_id_02" true
+toggle_proxy "zone_identifier_03" "a_record_id_03" true
